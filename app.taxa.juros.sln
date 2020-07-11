@@ -8,6 +8,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastru
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API.CalcularJuros", "API.CalcularJuros\API.CalcularJuros.csproj", "{CCFA6432-C9AE-4E6B-87AA-8CB098EE8252}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API.CalcularJuros.Tests", "API.CalcularJuros.Tests\API.CalcularJuros.Tests.csproj", "{C28F1690-14B7-480A-A130-CBF6AED30E05}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API.ObterJuros.Tests", "API.ObterJuros.Tests\API.ObterJuros.Tests.csproj", "{A36F68FF-DBF4-4C4C-B757-4789876197D5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +34,13 @@ Global
 		{CCFA6432-C9AE-4E6B-87AA-8CB098EE8252}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CCFA6432-C9AE-4E6B-87AA-8CB098EE8252}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CCFA6432-C9AE-4E6B-87AA-8CB098EE8252}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C28F1690-14B7-480A-A130-CBF6AED30E05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C28F1690-14B7-480A-A130-CBF6AED30E05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C28F1690-14B7-480A-A130-CBF6AED30E05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C28F1690-14B7-480A-A130-CBF6AED30E05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A36F68FF-DBF4-4C4C-B757-4789876197D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A36F68FF-DBF4-4C4C-B757-4789876197D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A36F68FF-DBF4-4C4C-B757-4789876197D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A36F68FF-DBF4-4C4C-B757-4789876197D5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
