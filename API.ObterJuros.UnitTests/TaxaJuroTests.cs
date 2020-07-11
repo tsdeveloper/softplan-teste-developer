@@ -9,9 +9,11 @@ using Xunit;
 
 namespace API.ObterJuros.Tests
 {
+  
     public class TaxaJuroTests
     {
         [Theory]
+        [Trait("Developer", "Taxa Juros Trait Test")]
         [InlineData(1)]
         [InlineData(2)]
         [InlineData(3)]
@@ -39,6 +41,7 @@ namespace API.ObterJuros.Tests
         }
         
         [Fact]
+        [Trait("Developer", "Taxa Juros Trait Test")]
         public void TaxaJuro_ObterValorTaxaJuro_DeveSerMaiorQueZero()
         {
             #region Arrange
