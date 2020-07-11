@@ -5,7 +5,7 @@
 
         <IsPackable>false</IsPackable>
 
-        <RootNamespace>API.ObterJuros.Tests</RootNamespace>
+        <RootNamespace>API.ObterJuros.UnitTests</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>

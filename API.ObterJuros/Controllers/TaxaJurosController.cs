@@ -1,17 +1,13 @@
-using API.ObterJuros.Dtos;
 using API.ObterJuros.Errors;
 using AutoMapper;
 using Core.Interfaces;
-using Core.Specification.TaxaJuros.SpecParams;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.ObterJuros.Controllers
 {
- 
     public class TaxaJurosController : BaseApiController
     {
-     
         private readonly IMapper _mapper;
         private readonly ITaxaJuroService _taxaJuroService;
 
@@ -28,11 +24,8 @@ namespace API.ObterJuros.Controllers
         public ActionResult GetTaxaJuros()
         {
             var data = _taxaJuroService.ValorTaxaJuros();
-            
-        return Ok(data);
+
+            return Ok(data);
         }
-
-       
-
     }
 }

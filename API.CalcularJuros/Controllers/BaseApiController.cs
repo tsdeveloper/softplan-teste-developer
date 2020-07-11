@@ -7,6 +7,5 @@ namespace API.CalcularJuros.Controllers
     public class BaseApiController : ControllerBase
     {
         // GET
-       
     }
 }

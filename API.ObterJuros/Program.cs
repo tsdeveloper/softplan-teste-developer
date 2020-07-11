@@ -22,8 +22,8 @@ namespace API.ObterJuros
             return WebHost.CreateDefaultBuilder(args)
                 .UseEnvironment(enviroment)
                 .UseStartup<Startup>()
-                .UseKestrel ()
-                .UseContentRoot (Directory.GetCurrentDirectory ())
+                .UseKestrel()
+                .UseContentRoot(Directory.GetCurrentDirectory())
                 .Build();
         }
     }

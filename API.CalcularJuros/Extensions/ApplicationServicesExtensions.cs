@@ -11,7 +11,6 @@ namespace API.CalcularJuros.Extensions
     {
         public static IServiceCollection AddApplicationServices(this IServiceCollection services)
         {
-
             services.AddScoped<ITaxaJuroService, TaxaJuroService>();
             services.Configure<ApiBehaviorOptions>(o =>
             {

@@ -19,7 +19,10 @@ namespace API.CalcularJuros.Extensions
         public static IApplicationBuilder UserSwaggerDocumentation(this IApplicationBuilder app)
         {
             app.UseSwagger();
-            app.UseSwaggerUI(c => { c.SwaggerEndpoint("/swagger/v1/swagger.json", "Acesso Ingresso API.CalcularJuros v1"); });
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Acesso Ingresso API.CalcularJuros v1");
+            });
 
             return app;
         }

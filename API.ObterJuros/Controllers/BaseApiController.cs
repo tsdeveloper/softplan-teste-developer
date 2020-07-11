@@ -7,6 +7,5 @@ namespace API.ObterJuros.Controllers
     public class BaseApiController : ControllerBase
     {
         // GET
-       
     }
 }

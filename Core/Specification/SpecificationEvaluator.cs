@@ -15,7 +15,7 @@ namespace Core.Specification
 
             if (spec.OrderBy != null)
                 query = query.OrderBy(spec.OrderBy);
-            
+
             if (spec.OrderbyByDescending != null)
                 query = query.OrderByDescending(spec.OrderbyByDescending);
 

@@ -10,7 +10,8 @@ namespace API.ObterJuros.Extensions
         {
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo {Title = "Acesso Ingresso API.CalcularJuros.ObterJuros", Version = "v1"});
+                c.SwaggerDoc("v1",
+                    new OpenApiInfo {Title = "Acesso Ingresso API.CalcularJuros.ObterJuros", Version = "v1"});
             });
 
             return services;
@@ -19,7 +20,10 @@ namespace API.ObterJuros.Extensions
         public static IApplicationBuilder UserSwaggerDocumentation(this IApplicationBuilder app)
         {
             app.UseSwagger();
-            app.UseSwaggerUI(c => { c.SwaggerEndpoint("/swagger/v1/swagger.json", "Acesso Ingresso API.CalcularJuros.ObterJuros v1"); });
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Acesso Ingresso API.CalcularJuros.ObterJuros v1");
+            });
 
             return app;
         }

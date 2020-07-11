@@ -9,12 +9,11 @@ namespace API.ObterJuros.Helpers
     {
         public MappingProfiles()
         {
-          CreateMap<TaxaJuro, TaxaJuroToReturnDto>()
+            CreateMap<TaxaJuro, TaxaJuroToReturnDto>()
                 .ReverseMap();
-          
-          CreateMap<TaxaJuroToReturnDto, TaxaJuroSpecParams>()
-              .ReverseMap();
-          
+
+            CreateMap<TaxaJuroToReturnDto, TaxaJuroSpecParams>()
+                .ReverseMap();
         }
     }
 }

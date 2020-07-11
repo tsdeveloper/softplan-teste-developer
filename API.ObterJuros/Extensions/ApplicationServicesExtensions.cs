@@ -9,7 +9,6 @@ namespace API.ObterJuros.Extensions
     {
         public static IServiceCollection AddApplicationServices(this IServiceCollection services)
         {
-          
             services.Configure<ApiBehaviorOptions>(o =>
             {
                 o.InvalidModelStateResponseFactory = actionConext =>
