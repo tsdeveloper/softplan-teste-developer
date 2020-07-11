@@ -1,6 +1,4 @@
-﻿using System.Threading.Tasks;
-using Core.Entities;
-using Core.Specification.TaxaJuros.SpecParams;
+﻿using Core.Entities;
 
 namespace Core.Interfaces
 {

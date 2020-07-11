@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Threading.Tasks;
 using Core.Entities;
 using Core.Interfaces;
-using Core.Specification.TaxaJuros.SpecParams;
 
 namespace Infrastructure.Services
 {
@@ -14,8 +12,9 @@ namespace Infrastructure.Services
             
             if (taxaJuro.ValorInicial > 0 && taxaJuro.Tempo > 0)
             {
-                taxaJuro.TotalValorJuroComposto  = Convert.ToDecimal(Math.Pow(Convert.ToDouble(taxaJuro.ValorInicial * (1 + taxaJuro.ValorJuro)),taxaJuro.Tempo));
-                
+                var resultTotalPotenciacao  =  Convert.ToDecimal(Math.Pow((1D + Convert.ToDouble(taxaJuro.ValorJuro)),taxaJuro.Tempo));
+
+                taxaJuro.ValorFinal = Convert.ToDecimal(taxaJuro.ValorInicial * resultTotalPotenciacao).ToString("N2");
                 return  taxaJuro;
             }
             
