@@ -6,7 +6,11 @@ namespace Infrastructure.Services
 {
     public class TaxaJuroService : ITaxaJuroService
     {
-        
+        public decimal ValorTaxaJuros()
+        {
+            return 0.01M;
+        }
+
         public TaxaJuro CalcularJuros(TaxaJuro taxaJuro)
         {
             

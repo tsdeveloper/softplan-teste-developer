@@ -35,10 +35,10 @@ namespace API.CalcularJuros.Controllers
         {
             var client = new RestClient($"{BASE_URL_API}/taxajuros/taxajuros");
             var request = new RestRequest(Method.GET) {RequestFormat =  DataFormat.Json};
-            var response = JsonConvert.DeserializeObject<TaxaJuroToReturnDto>(client.Execute(request).Content);
-            if (response != null)
+            var response = JsonConvert.DeserializeObject<decimal?>(client.Execute(request).Content);
+            if (response != null && response > 0)
             {
-                taxaJuroParams.ValorJuro = response.ValorJuro;
+                taxaJuroParams.ValorJuro = response.Value;
                 var data = _mapper.Map<TaxaJuroToReturnDto>(_taxaJuroService.CalcularJuros(_mapper.Map<TaxaJuro>(taxaJuroParams)));
             
                 return Ok(data);    

@@ -1,6 +1,7 @@
 using API.ObterJuros.Dtos;
 using API.ObterJuros.Errors;
 using AutoMapper;
+using Core.Interfaces;
 using Core.Specification.TaxaJuros.SpecParams;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -12,19 +13,21 @@ namespace API.ObterJuros.Controllers
     {
      
         private readonly IMapper _mapper;
-       
-        public TaxaJurosController(IMapper mapper)
+        private readonly ITaxaJuroService _taxaJuroService;
+
+        public TaxaJurosController(IMapper mapper, ITaxaJuroService taxaJuroService)
         {
             _mapper = mapper;
+            _taxaJuroService = taxaJuroService;
         }
 
         [HttpGet]
         [Route("taxajuros")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(ApiResponse), StatusCodes.Status400BadRequest)]
-        public ActionResult<TaxaJuroToReturnDto> GetTaxaJuros()
+        public ActionResult GetTaxaJuros()
         {
-            var data = _mapper.Map<TaxaJuroToReturnDto>(new TaxaJuroSpecParams());
+            var data = _taxaJuroService.ValorTaxaJuros();
             
         return Ok(data);
         }
