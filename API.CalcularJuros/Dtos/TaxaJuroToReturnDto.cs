@@ -7,6 +7,6 @@ namespace API.CalcularJuros.Dtos
         public decimal ValorJuro { get; set; }
         public decimal ValorInicial { get; set; }
         public int Tempo { get; set; }
-        public string ValorFinal { get; set; }
+        public decimal ValorFinal { get; set; }
     }
 }

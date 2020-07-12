@@ -1,5 +1,7 @@
 ﻿using System.Linq;
 using API.ObterJuros.Errors;
+using Core.Interfaces;
+using Infrastructure.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -9,6 +11,7 @@ namespace API.ObterJuros.Extensions
     {
         public static IServiceCollection AddApplicationServices(this IServiceCollection services)
         {
+            services.AddScoped<ITaxaJuroService, TaxaJuroService>();
             services.Configure<ApiBehaviorOptions>(o =>
             {
                 o.InvalidModelStateResponseFactory = actionConext =>

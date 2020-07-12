@@ -1,6 +1,6 @@
 using System;
 
-namespace API.CalcularJuros
+namespace WebApplication
 {
     public class WeatherForecast
     {

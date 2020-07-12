@@ -1,6 +1,4 @@
 ﻿using API.ObterJuros.UnitTests.Fixture;
-using Common.Factory;
-using Core.Entities;
 using FluentAssertions;
 using Xunit;
 

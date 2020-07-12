@@ -1,3 +1,4 @@
+using System.Threading.Tasks;
 using API.ObterJuros.Errors;
 using AutoMapper;
 using Core.Interfaces;
@@ -21,9 +22,10 @@ namespace API.ObterJuros.Controllers
         [Route("taxajuros")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(ApiResponse), StatusCodes.Status400BadRequest)]
-        public ActionResult GetTaxaJuros()
+        public async  Task<ActionResult> GetTaxaJuros()
         {
-            var data = _taxaJuroService.ValorTaxaJuros();
+            
+            var data = await Task.Run(() => _taxaJuroService.ValorTaxaJuros());
 
             return Ok(data);
         }

@@ -1,11 +1,5 @@
-using System;
-using System.Web.Http;
-using System.Web.Http.Results;
 using API.ObterJuros.UnitTests.Fixture;
-using Common.Factory;
-using Core.Entities;
 using FluentAssertions;
-using Moq;
 using Xunit;
 
 namespace API.ObterJuros.UnitTests

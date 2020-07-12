@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 
-namespace API.CalcularJuros
+namespace WebApplication
 {
     public class Program
     {

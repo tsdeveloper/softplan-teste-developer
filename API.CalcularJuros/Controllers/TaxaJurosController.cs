@@ -1,3 +1,4 @@
+using System.Threading.Tasks;
 using API.CalcularJuros.Dtos;
 using API.CalcularJuros.Errors;
 using AutoMapper;
@@ -29,11 +30,12 @@ namespace API.CalcularJuros.Controllers
         [Route("calculajuros")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(ApiResponse), StatusCodes.Status400BadRequest)]
-        public ActionResult<TaxaJuroToReturnDto> GetCalculaJuros([FromQuery] TaxaJuroSpecParams taxaJuroParams)
+        public async Task<ActionResult<TaxaJuroToReturnDto>> GetCalculaJuros([FromQuery] TaxaJuroSpecParams taxaJuroParams)
         {
             var client = new RestClient($"{BASE_URL_API}/taxajuros/taxajuros");
             var request = new RestRequest(Method.GET) {RequestFormat = DataFormat.Json};
-            var response = JsonConvert.DeserializeObject<decimal?>(client.Execute(request).Content);
+            var result = await client.ExecuteGetAsync(request);
+            var response = JsonConvert.DeserializeObject<decimal?>(result.Content);
             if (response != null && response > 0)
             {
                 taxaJuroParams.ValorJuro = response.Value;
@@ -43,7 +45,7 @@ namespace API.CalcularJuros.Controllers
                 return Ok(data);
             }
 
-            return Ok(new TaxaJuroToReturnDto());
+            return new EmptyResult();
         }
     }
 }

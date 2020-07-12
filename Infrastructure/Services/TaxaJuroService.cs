@@ -18,7 +18,8 @@ namespace Infrastructure.Services
                 var resultTotalPotenciacao =
                     Convert.ToDecimal(Math.Pow(1D + Convert.ToDouble(taxaJuro.ValorJuro), taxaJuro.Tempo));
 
-                taxaJuro.ValorFinal = Convert.ToDecimal(taxaJuro.ValorInicial * resultTotalPotenciacao).ToString("N2");
+                var result = (taxaJuro.ValorInicial * resultTotalPotenciacao).ToString("N2");
+                taxaJuro.ValorFinal = Convert.ToDecimal(result);
                 return taxaJuro;
             }
 
